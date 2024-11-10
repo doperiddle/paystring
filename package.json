@@ -40,7 +40,7 @@
     "release": "hub release create -d -m $npm_package_version $npm_package_version"
   },
   "dependencies": {
-    "@hapi/boom": "^9.1.0",
+    "@hapi/boom": "^10.0.1",
     "@payid-org/server-metrics": "^1.1.0",
     "@xpring-eng/http-status": "^1.0.0",
     "@xpring-eng/logger": "^1.0.0",
