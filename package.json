@@ -50,7 +50,7 @@
     "pg": "8.2.1",
     "prom-client": "^12.0.0",
     "semver": "^7.3.2",
-    "typescript": "^3.9.5"
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
