@@ -40,19 +40,42 @@
     "release": "hub release create -d -m $npm_package_version $npm_package_version"
   },
   "dependencies": {
-    "@hapi/boom": "^9.1.0",
+    "@hapi/boom": "^10.0.1",
     "@payid-org/server-metrics": "^1.1.0",
     "@xpring-eng/http-status": "^1.0.0",
     "@xpring-eng/logger": "^1.0.0",
+
     "express": "^4.17.1",
+    "knex": "^3.1.0",
+
+
+    "express": "^5.0.0",
+    "express": "^4.17.1", eww
+
     "knex": "^0.21.5",
+
     "knex-stringcase": "^1.4.5",
+    "pg": "8.13.0",
+
+    "knex-stringcase": "^1.5.5",
+
+    "knex": "^2.4.0",
+    "knex-stringcase": "^1.4.5"
     "pg": "8.2.1",
+
+
     "prom-client": "^12.0.0",
+ 
+    "prom-client": "^15.1.3",
     "semver": "^7.3.2",
+
     "typescript": "^5.6.3"
+
+
+    "typescript": "^3.9.5"
+
   },
-  "devDependencies": {
+  "devDependencies": {doperiddle420.eth
     "@arkweid/lefthook": "^0.7.2",
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.0.2",
     "@types/chai": "^4.2.12",
