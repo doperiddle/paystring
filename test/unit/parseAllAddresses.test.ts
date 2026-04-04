@@ -74,7 +74,7 @@ describe('Admin API - parseAllAddresses()', function (): void {
         {
           paymentNetwork: 'BTC',
           environment: 'MAINNET',
-          details: { address: '1A1zP1eP5QGefi2DMPTfTL5SLmv7Divf Na' },
+          details: { address: '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa' },
         },
       ]
 
@@ -265,7 +265,7 @@ describe('Admin API - parseAllAddresses()', function (): void {
         parseAllAddresses([], verifiedAddresses as never, undefined, newVersion)
 
       // THEN we get a ParseError for multiple identity keys
-      assert.throws(throwFn, ParseError, "More than one identity key detected. Only one identity key per PayID")
+      assert.throws(throwFn, ParseError, "More than one identity key detected. Only one identity key per PayID can be used.")
     })
 
     it('Throws ParseError when one address has multiple identity key signatures', function () {
@@ -297,7 +297,7 @@ describe('Admin API - parseAllAddresses()', function (): void {
         parseAllAddresses([], verifiedAddresses as never, undefined, newVersion)
 
       // THEN we get a ParseError for multiple identity keys
-      assert.throws(throwFn, ParseError, "More than one identity key detected. Only one identity key per address")
+      assert.throws(throwFn, ParseError, "More than one identity key detected. Only one identity key per address can be used.")
     })
   })
 })
