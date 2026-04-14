@@ -1,5 +1,5 @@
-import * as knexInit from 'knex'
-import * as knexStringcase from 'knex-stringcase'
+import knexInit from 'knex'
+import knexStringcase from 'knex-stringcase'
 
 import config from '../config'
 import { handleDatabaseError } from '../utils/errors'

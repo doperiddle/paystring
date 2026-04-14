@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method --
  * Knex transaction commits and rollbacks are "unbound methods"
  */
-import { Transaction } from 'knex'
+import { Knex } from 'knex'
 
 import knex from '../db/knex'
 import { Account, Address, AddressInformation } from '../types/database'
@@ -44,7 +44,7 @@ export async function insertUser(
   addresses: readonly AddressInformation[],
   identityKey?: string,
 ): Promise<readonly AddressInformation[]> {
-  return knex.transaction(async (transaction: Transaction) => {
+  return knex.transaction(async (transaction: Knex.Transaction) => {
     const insertedAddresses = await knex
       .insert({
         payId,
@@ -105,7 +105,7 @@ export async function replaceUser(
   addresses: readonly AddressInformation[],
   identityKey?: string,
 ): Promise<readonly AddressInformation[] | null> {
-  return knex.transaction(async (transaction: Transaction) => {
+  return knex.transaction(async (transaction: Knex.Transaction) => {
     const updatedAddresses = await knex<Account>('account')
       .where('payId', oldPayId)
       .update({ payId: newPayId, identityKey })
@@ -200,7 +200,7 @@ function addAccountIdToAddresses(
  */
 async function insertAddresses(
   addresses: readonly DatabaseAddress[],
-  transaction: Transaction,
+  transaction: Knex.Transaction,
 ): Promise<readonly AddressInformation[]> {
   if (addresses.length === 0) {
     return []

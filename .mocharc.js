@@ -2,7 +2,7 @@
 
 module.exports = {
   require: [
-    'ts-node/register',
+    'ts-node/register/transpile-only',
     'source-map-support/register',
   ],
   extension: [
