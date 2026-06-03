@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:26.2.0-alpine
 
 LABEL maintainer="Florent Uzio <fuzio@ripple.com>"
 
